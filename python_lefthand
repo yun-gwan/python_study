@@ -1,2 +1,178 @@
-print('lefthand')
-print('github연결중')
+print("hello world")
+print('토끼야 안녕')
+
+# 숫자형
+print(1)
+print(-2)
+print(3.14)
+
+# 사칙연산 (연산자)
+print(1+2)
+print(2/4)
+print(6/3)  # 정수/정수 => 실수
+
+# 제곱(**), 몫구하기(//), 나머지구하기(%)
+print(5**2)
+print(5//2)
+print(5%2)
+
+# 문자열(문자를 세워놓은 것) '문자열', "문자열"
+print('hello world')
+print('3.14')
+
+# + => (문자열 + 문자열), * => (문자열 * 정수인 숫자)
+print('토끼'+"야"+" 안녕")
+print('데굴'*3)
+
+# 변수(할당연산자) => 변수_이름 = 저장할 값
+rainbow = '빨주노초파남보'
+print(rainbow)
+
+count = 0
+print(count)
+count = 1
+print(count)
+count = count + 1
+print(count)
+
+# 실습
+# 커피, 주스, 홍차의 가격을 각각 coffee, juice, tea에 저장하세요.
+# coffee = 4100, juice = 4600, tea = 3900
+# 주문서1 = 커피 3잔, 주스 2잔, 홍차 1잔
+# 주문서2 = 커피 4잔, 주스 3잔, 홍차 3잔
+
+coffee = 4100
+juice = 4600
+tea = 3900
+
+print(coffee*3 + juice*2 + tea*1)
+print(coffee*4 + juice*3 + tea*3)
+
+# 여러 변수를 하나로 (list)
+candies = ['딸기맛', '레몬맛', '수박맛', '박하맛','우유맛']
+print(candies)
+
+# 리스트의 기본 구조
+# [값1, 값2, 값3, ...]
+my_list = []
+print(my_list)
+my_list3 = ['엘리스', 10, [1.0, 1.2]]
+print(my_list3)
+
+# 리스트에 값 추가하기
+# 리스트.append(추가할_값)
+my_list3.append('2')
+print(my_list3)
+
+# 값에 접근하기
+# 리스트[접근할_인덱스]
+clovers = ['클로버1', '수정', '클로버3']
+print(clovers[1])
+clovers[1] = '클로버2'
+print(clovers)
+
+# 값 제거하기, del
+# del 리스트[제거할_인덱스]
+del clovers[1]
+print(clovers)
+print(clovers[1])
+
+# 실습
+# 콜라맛, 포도맛 사탕을 추가, 박하맛 제거
+candies=['딸기맛', '레몬맛', '수박맛', '박하맛', '우유맛']
+candies.append('콜라맛')
+candies.append('포도맛')
+del candies[3]
+print(candies)
+
+# 여러 값 가져오기 [시작_인덱스:끝_인덱스+1]
+week = ['월', '화', '수', '목', '금','토', '일']
+print(week)
+print(week[2:5]) # 수, 목, 금 가져오기
+
+# 정렬하기 리스트.sort()
+animals = ['채셔고양이', '오리', '오리', '도도새']
+animals.sort()
+print(animals)
+
+# 리스트.count(세어볼_값)
+print(animals.count('오리'))
+print(animals.count('도도새'))
+
+# 횟수로 반복하기 for
+for num in range(5):
+    print('안녕 거북이', num)
+
+for x in [0,1,2]:
+    print(x)
+
+characters = ['엘리스', '도도새', '3월토끼']
+for character in characters:
+    print(character)
+
+for character in characters:
+    print(character, '퇴장')
+
+# for 문자열은 한글자씩 출력!
+for letter in '채셔고양이':
+    print(letter)
+
+# 순서열 만들기 range(끝_값+1) or range(시작_값,끝_값+1)
+for num in range(3):
+    print(num)
+
+for num in range(1,4):
+    print(num)
+
+# 구구단 2단
+for y in range(1, 10):
+    print(2, 'x', y, '=', y*2)
+
+# 구구단 전체
+for x in range(1, 10):
+    for y in range(1, 10):
+        print(x, 'x', y, '=', x*y )
+    print('\n')
+
+# 실습
+# for와 list의 인덱슬르 사용해 roses의 하얀장미를 모두 빨간장미로
+roses = ['하얀장미', '하얀장미', '하얀장미']
+for i in [0, 1, 2]:
+    roses[i] = '빨간장미'
+print(roses)
+
+# ####### 값 비교하기
+# == 같나?, != 다르나?, >, <, >=, <=
+print(1 == 2)
+print(2 > 3)
+
+# if 조건: 실행할 명령
+if True:
+    print('참입니다')
+if False:
+    print("참입니다")
+
+score = 90
+if score > 80:
+    print('합격입니다')
+
+# else, elif(두번째 조건달 때)
+score = 50
+if score>70:
+    print('합격입니다')
+else:
+    print("불합격입니다")
+
+# 실습
+# 입장료 20세이상 8000, 10대이상 5000 나머지 2000
+total_price = 0
+ages = [22, 21, 17, 32, 4, 28, 19, 8]
+
+for age in ages:
+    if age >= 20:
+        total_price = total_price + 8000
+    elif age >= 10:
+        total_price = total_price + 5000
+    else:
+        total_price = total_price + 2000
+print('총입장료는', total_price, "원입니다")
